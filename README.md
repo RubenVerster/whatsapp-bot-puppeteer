@@ -30,7 +30,7 @@ If you want an extensive list of jokes I have collected and formatted for this b
 rrverster31415@gmail.com
 
 # Scheduled Messages
-## Send messges at specified times
+## Send messages at specified times
 
 I used the node-cron package to execute functions at certain times of the day.
 Read the docs for this package if you want to create more intricate cron jobs for this bot and to find the correct format for your timezone

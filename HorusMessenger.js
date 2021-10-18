@@ -22,7 +22,7 @@ function delay(time) {
     await page.click(`[title="${person}"]`);
     await delay(555);
 
-    console.log(`Found  ${person}`);
+    console.log(`Found ${person}`);
     const editor = await page.$$('._13NKt');
     await editor[1].focus();
     await delay(555);
@@ -43,7 +43,7 @@ function delay(time) {
     await page.click(`[title="${person}"]`);
     await delay(555);
 
-    console.log(`Found  ${person}`);
+    console.log(`Found ${person}`);
     const editor = await page.$$('._13NKt');
     await editor[1].focus();
     await delay(555);
@@ -83,28 +83,6 @@ function delay(time) {
       timezone: 'Africa/Windhoek',
     }
   );
-  //11:11
-  cron.schedule(
-    '11 11 * * *',
-    async () => {
-      await sendMessage('Hey');
-    },
-    {
-      scheduled: true,
-      timezone: 'Africa/Windhoek',
-    }
-  );
-  //13:01 (01:01 PM)
-  cron.schedule(
-    '1 13 * * *',
-    async () => {
-      await sendMessage('Hope your day has been going well so far 😊');
-    },
-    {
-      scheduled: true,
-      timezone: 'Africa/Windhoek',
-    }
-  );
   //15:03 (03:03 PM)
   cron.schedule(
     '3 15 * * *',
@@ -127,22 +105,11 @@ function delay(time) {
       timezone: 'Africa/Windhoek',
     }
   );
-  //17:55 (5:55 PM)
-  cron.schedule(
-    '55 17 * * *',
-    async () => {
-      await sendJoke();
-    },
-    {
-      scheduled: true,
-      timezone: 'Africa/Windhoek',
-    }
-  );
   //20:08 (08:08 PM)
   cron.schedule(
     '8 20 * * *',
     async () => {
-      await sendMessage('Sleep well');
+      await sendMessage('Sleep well 😘');
     },
     {
       scheduled: true,
@@ -160,7 +127,9 @@ function delay(time) {
   const page = await browser.newPage();
   await page.goto('https://web.whatsapp.com');
   await delay(17171);
-  console.log('Opened WA');
+  console.log('Opened WhatsApp');
+  await page.click(`[title="${personAfterMsg}"]`);
+  console.log('Selected Fallback Contact');
   console.log('Waiting for Cron Jobs :D');
-  sendMessage('Carpe motherfucking diem the shit out of today! XP');
+  
 })();

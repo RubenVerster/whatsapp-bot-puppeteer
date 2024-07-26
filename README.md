@@ -26,9 +26,6 @@ Simply add your jokes to the funnyJokes array. Make sure they are properly forma
 Please do not use the escape sequence for a new line in the string for a joke ( \n )
 This will cause the messenger to send the message instead of going to the next line :)
 
-If you want an extensive list of jokes I have collected and formatted for this bot, send me an email :P
-rrverster31415@gmail.com
-
 # Scheduled Messages
 ## Send messages at specified times
 
